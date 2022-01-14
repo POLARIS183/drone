@@ -5,13 +5,13 @@
 from djitellopy import Tello
 import time
 print("This code is © POLARIS183 2022, using DJITelloPy.")
-sleep(1)
+time.sleep(1)
 print("This can be accessed on Github at https://github.com/damiafuentes/DJITelloPy.")
-sleep(1)
+time.sleep(1)
 print("If, at any point, something goes wrong with this program, use tello.emergency() to emergency stop, and contact me on northpolaris@protonmail.com.")
-sleep(1)
+time.sleep(1)
 print("Thanks for running this code! The program will connect in two seconds. Make sure the drone and computer are about 1 metre away.")
-sleep(2)
+time.sleep(2)
 # Disclaimer's out of the way...
 tello = Tello()
 # Now, I have to connect the program...
