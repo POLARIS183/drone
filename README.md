@@ -1,6 +1,6 @@
 # PolarisDrone
 
-- Acrobatics can be found in acrobatic.py
+- Acrobatics can be found in acrobatics.py
 - If you need to emergency-stop, use emergency.py.
 - ✨Easy!
 
