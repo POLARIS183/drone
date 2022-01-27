@@ -20,7 +20,7 @@ tello.connect()
 tello.takeoff()
 time.sleep(0.5)
 # Quick battery check!
-battery = tello.getbattery()
+battery = tello.get_battery()
 if battery <= 10:
   print("Unfortunately, this drone has a very low battery. Therefore, the program has a higher risk of failing.\nThe program will now end.")
   time.sleep(0.5)
@@ -32,8 +32,9 @@ if battery <= 10:
 else:
   print("The battery is fine, so we can get on with the program...")
 # Now, it's time for the fun stuff...
+tello.set_speed(50)
 tello.get_height()
-tello.move_up(20)
+tello.move_up(100)
 time.sleep(1)
 tello.get_height()
 tello.move_left(100)
@@ -50,4 +51,8 @@ tello.move_forward(100)
 # All good things must come to an end...
 time.sleep(1)
 tello.land()
+battery2 = tello.get_battery()
+print("This flight used up,"battery2-battery1,"% of battery! You might want to charge your drone.")
+flighttime = tello.get_flight_time()
+print("This flight lasted",flighttime,"seconds.\nThanks for running the program!\n-POLARIS183.")
 tello.end()
